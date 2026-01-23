@@ -7,11 +7,8 @@ app = Flask(__name__)
 
 # --- CONFIGURATIONS ---
 VERIFY_TOKEN = "rodolfo123superseguro"
-# Your Long-Lived Token from Facebook
 PAGE_ACCESS_TOKEN = "EAAWtJy3WmlsBQhsKz8RJdhZBsSEkdyT8vmSnK639lhJNe3P5e4jBkwd0q7RVSCmVWEjDlJtplczFG9pcvTGyZCFtoFO6XekDzE66RDHidvJOwqnv4q8PPOvyWwpZAPZB1LrEcX7VbWOXr1duXeykO4FCRRFbFZCPqYxvZA5vSMMt0XJTbfm7FIvWRk6kH6"
-# Your Google Gemini API Key
 GEMINI_API_KEY = "AIzaSyCi9HxWEIHXSzcdYm0_vCke-kGy8UDDUYI"
-
 # Configure Google AI
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
@@ -71,3 +68,4 @@ def webhook():
 if __name__ == '__main__':
     # Running on port 3000 as configured for Render
     app.run(host='0.0.0.0', port=3000)
+
